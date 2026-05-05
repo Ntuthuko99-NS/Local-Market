@@ -1,0 +1,128 @@
+{
+  "name": "ServiceAd",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Service title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Service description"
+    },
+    "service_type": {
+      "type": "string",
+      "enum": [
+        "plumbing",
+        "electrical",
+        "cleaning",
+        "gardening",
+        "painting",
+        "carpentry",
+        "transport",
+        "tutoring",
+        "beauty",
+        "cooking",
+        "childcare",
+        "security",
+        "it_services",
+        "handyman",
+        "other"
+      ],
+      "description": "Type of service"
+    },
+    "price_from": {
+      "type": "number",
+      "description": "Starting price in ZAR"
+    },
+    "price_to": {
+      "type": "number",
+      "description": "Maximum price in ZAR"
+    },
+    "price_type": {
+      "type": "string",
+      "enum": [
+        "hourly",
+        "daily",
+        "fixed",
+        "negotiable"
+      ],
+      "default": "negotiable"
+    },
+    "province": {
+      "type": "string",
+      "enum": [
+        "gauteng",
+        "western_cape",
+        "kwazulu_natal",
+        "eastern_cape",
+        "free_state",
+        "limpopo",
+        "mpumalanga",
+        "north_west",
+        "northern_cape"
+      ]
+    },
+    "city": {
+      "type": "string"
+    },
+    "availability": {
+      "type": "string",
+      "enum": [
+        "available_now",
+        "weekdays",
+        "weekends",
+        "by_appointment"
+      ],
+      "default": "available_now"
+    },
+    "experience_years": {
+      "type": "number"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "is_verified": {
+      "type": "boolean",
+      "default": false
+    },
+    "is_boosted": {
+      "type": "boolean",
+      "default": false
+    },
+    "rating": {
+      "type": "number",
+      "default": 0
+    },
+    "total_reviews": {
+      "type": "number",
+      "default": 0
+    },
+    "jobs_completed": {
+      "type": "number",
+      "default": 0
+    },
+    "provider_name": {
+      "type": "string"
+    },
+    "provider_phone": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "paused",
+        "removed"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "title",
+    "service_type"
+  ]
+}
