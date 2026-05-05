@@ -1,0 +1,67 @@
+{
+  "name": "Order",
+  "type": "object",
+  "properties": {
+    "product_id": {
+      "type": "string"
+    },
+    "product_title": {
+      "type": "string"
+    },
+    "seller_email": {
+      "type": "string"
+    },
+    "buyer_email": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "payment_method": {
+      "type": "string",
+      "enum": [
+        "eft",
+        "cash_on_delivery",
+        "payfast",
+        "ozow",
+        "snapscan"
+      ],
+      "default": "cash_on_delivery"
+    },
+    "delivery_method": {
+      "type": "string",
+      "enum": [
+        "pickup",
+        "local_delivery",
+        "courier",
+        "meet_public"
+      ],
+      "default": "pickup"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "in_transit",
+        "delivered",
+        "cancelled",
+        "completed"
+      ],
+      "default": "pending"
+    },
+    "buyer_name": {
+      "type": "string"
+    },
+    "buyer_phone": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "product_id",
+    "amount"
+  ]
+}
