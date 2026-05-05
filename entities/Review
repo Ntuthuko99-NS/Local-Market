@@ -1,0 +1,34 @@
+{
+  "name": "Review",
+  "type": "object",
+  "properties": {
+    "target_type": {
+      "type": "string",
+      "enum": [
+        "product",
+        "service",
+        "seller"
+      ],
+      "description": "What is being reviewed"
+    },
+    "target_id": {
+      "type": "string",
+      "description": "ID of the product/service/seller"
+    },
+    "rating": {
+      "type": "number",
+      "description": "Rating 1-5"
+    },
+    "comment": {
+      "type": "string"
+    },
+    "reviewer_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "target_type",
+    "target_id",
+    "rating"
+  ]
+}
